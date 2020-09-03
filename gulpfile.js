@@ -4,6 +4,8 @@ const sourcemaps = require("gulp-sourcemaps");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
+const terser = require("gulp-terser");
+const rename = require("gulp-rename");
 
 
 
@@ -20,9 +22,22 @@ function styles() {
 
 }
 
+function js() {
+    return(
+        gulp.src(["js/*.js", "!js/*min.js"])
+            .pipe(terser())
+            .pipe(rename({
+                suffix:".min"
+            }))
+            .pipe(gulp.dest("js"))
+    );
+}
+
 function watch(){
     gulp.watch("css/*.scss", styles);
+    gulp.watch(["js/*.js", "!js/*min.js"], js);
 }
 
 exports.styles = styles;
+exports.js = js;
 exports.watch = watch;
