@@ -18,5 +18,8 @@
   "homepage": "https://github.com/eilerskov/dasshboardProject#readme",
   "dependencies": {
     "jquery": "^3.5.1"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2"
   }
 }
