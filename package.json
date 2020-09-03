@@ -1,0 +1,22 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eilerskov/dasshboardProject.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eilerskov/dasshboardProject/issues"
+  },
+  "homepage": "https://github.com/eilerskov/dasshboardProject#readme",
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
