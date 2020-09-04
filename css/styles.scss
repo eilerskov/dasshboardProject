@@ -3,21 +3,31 @@
 
 * { /* Gælder alt på hele siden */
   box-sizing: border-box; /* Bokse har altid den størrelse man giver uanset om der tilføjes margen, padding mv. */
+  transition: ease all .5s;
 }
 
 /* Ovenstående kode kan give problemer ved nogle 3. parts scripts man henter. Men det gør det nemmere at forstå og lave kodning når man starter. */
 
 body {
-  margin: 0; /* Ingen kanter i siden af browser */
   font-family: "Be Vietnam", sans-serif;
-  background-image: url(../images/background.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
   background-color: black;
-  transition: ease all .5s;
+
 }
+
+.background{
+  background-image: url(../images/background.jpg);
+  opacity:0.2;
+  position:absolute;
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index:-1;
+  height: 100vh;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0; /* Ingen ydre margen fra overskrifter */
@@ -65,6 +75,8 @@ header{
       }
   }
 }
+
+
 
 .sectionOneContainer{
   background: $salesBackgroundColor;
@@ -196,6 +208,10 @@ footer{
     display: block;
   }
 
+  .binder{
+    width: 260px;
+  }
+
   .sectionOneContainer{
     display: flex;
     justify-content: center;
@@ -261,9 +277,17 @@ footer{
 
 @media #{$desktop}{
   .container{
-    margin: 0 20%;
+    margin: 0 10%;
   }
 }
+
+  @media #{$desktop2}{
+    .container {
+      margin: 0 20%;
+    }
+  }
+
+
 
 
 
