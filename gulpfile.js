@@ -38,6 +38,9 @@ function watch(){
     gulp.watch(["js/*.js", "!js/*min.js"], js);
 }
 
+const build = gulp.parallel(styles, js);
+
 exports.styles = styles;
 exports.js = js;
 exports.watch = watch;
+exports.build = build;
