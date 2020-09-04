@@ -10,6 +10,13 @@
 body {
   margin: 0; /* Ingen kanter i siden af browser */
   font-family: "Be Vietnam", sans-serif;
+  background-image: url(../images/background.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: black;
+  transition: ease all .5s;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -59,6 +66,9 @@ header{
   }
 }
 
+.sectionOneContainer{
+  background: $salesBackgroundColor;
+}
 .containerHeader{
   height: 32px;
   color: white;
@@ -82,17 +92,6 @@ header{
   align-items: center;
 }
 
-#donutchart{
-  width: 400px;
-  height: 200px;
-}
-
-#piechart{
-
-  width: 400px;
-  height: 200px;
-}
-
 .backgroundBreak{
   background: linear-gradient(180deg, rgba(32,36,39,1) 0%, rgba(59,63,65,1) 4%, rgba(32,36,39,1) 8%, rgba(26,27,31,1) 28%);
   height: 15px;
@@ -102,19 +101,23 @@ header{
   height: 208px;
   background: $salesBackgroundColor;
   border: $borderStyle;
-  display: flex;
-  gap: 15px;
+
+  .salesbox1{
+    display: flex;
+    background-color: $salesBackgroundColor2;
 
     .salesImg{
       background: $boxContainerColor;
       height: 191px;
       width: 191px;
-      margin: 10px 0 0 10px;
+      margin: 5px;
     }
 
     .salesText{
       max-width: 150px;
       padding-top: 5px;
+      padding-left: 15px;
+
 
       h3{
         color: white;
@@ -127,6 +130,11 @@ header{
       }
 
     }
+  }
+
+
+
+
 
 
 
@@ -174,8 +182,89 @@ footer{
 
 }
 
+.desktop{
+  display: none;
+}
+
 @media #{$tablet} {
-  header{
-    height: 100px;
+
+  .mobile{
+    display: none;
+  }
+
+  .desktop{
+    display: block;
+  }
+
+  .sectionOneContainer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .boxContainer{
+    max-width: 260px;
+    min-width: 240px;
+  }
+
+  .salesBackground{
+    display: flex;
+    justify-content: center;
+    background: white;
+    height: 400px;
+    gap: 10px;
+    padding: 10px;
+
+
+
+    .salesbox1{
+      flex-direction: column;
+      background: $salesBackgroundColor;
+      height: 353px;
+    }
+
+    .salesbox2{
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  .section3{
+
+    width: 280px;
+    height: 283px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .extraLong{
+    height: 150px;
+    width: 280px;
+  }
+
+  .extraShort{
+    height: 132px;
+    width: 280px;
+  }
+
+  footer{
+    padding-top: 20px;
+
+  }
+
+
+  };
+
+@media #{$desktop}{
+  .container{
+    margin: 0 20%;
   }
 }
+
+
+
+
