@@ -1,4 +1,5 @@
 @import "colors";
+@import "mediaQueries";
 
 * { /* Gælder alt på hele siden */
   box-sizing: border-box; /* Bokse har altid den størrelse man giver uanset om der tilføjes margen, padding mv. */
@@ -171,4 +172,10 @@ footer{
     color: #47afff;
   }
 
+}
+
+@media #{$tablet} {
+  header{
+    height: 100px;
+  }
 }
